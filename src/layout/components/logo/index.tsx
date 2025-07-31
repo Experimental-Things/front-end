@@ -1,5 +1,10 @@
+import Logo from "@/assets/images/logo.webp";
 export function LogoAndBanner() {
-    return <>
-        <h2 className="text-xl font-bold mb-4">Sidebar</h2>
+  return (
+    <>
+      <div className="">
+        <img src={Logo} alt="logo" className="rounded-md"/>
+      </div>
     </>
+  );
 }
