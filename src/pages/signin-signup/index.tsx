@@ -3,6 +3,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import SignIn from '@/pages/signin-signup/components/signin'
 import SignUp from '@/pages/signin-signup/components/signup'
 import LoginImage from '@/assets/images/login.webp'
+import SignUpImage from '@/assets/images/signup.webp'
 
 export default function SignInSignUp() {
   const [currentTab, setCurrentTab] = useState('signin')
@@ -28,11 +29,11 @@ export default function SignInSignUp() {
           <div className="w-full max-w-sm mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Welcome Back</h2>
             {/* <SignIn /> */}
-            <Tabs defaultValue={TAB_DATA[0]?.value} className="w-full" >
+            <Tabs defaultValue={TAB_DATA[0]?.value} className="w-full" onValueChange={(val) => {setCurrentTab(val)}}>
               <TabsList className="grid w-full grid-cols-2 mb-6">
                 {
                   TAB_DATA.map((tab: any, i: number) => (
-                    <TabsTrigger key={i} value={tab.value} onClick={(_event: any) => setCurrentTab(tab.value)} >{tab.label}</TabsTrigger>
+                    <TabsTrigger key={i} value={tab.value} onClick={(_event: any) => console.log("QQQQQQQQQQQ")} >{tab.label}</TabsTrigger>
                   ))
                 }
               </TabsList>
